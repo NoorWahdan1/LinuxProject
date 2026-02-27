@@ -1,0 +1,466 @@
+#!/bin/bash
+
+############################################################
+# 🐧 LINUX COMMANDS HANDBOOK - 153 COMMANDS
+# Description: Reference file containing 153 essential
+# Linux commands with short explanations and examples.
+############################################################
+
+##############################
+# FILE MANAGEMENT
+##############################
+
+# 1. ls - List directory contents
+# Example:
+# ls -la
+
+# 2. cd - Change directory
+# Example:
+# cd /etc
+
+# 3. pwd - Print working directory
+# Example:
+# pwd
+
+# 4. cp - Copy files/directories
+# Example:
+# cp file.txt /tmp/
+
+# 5. mv - Move or rename files
+# Example:
+# mv old.txt new.txt
+
+# 6. rm - Remove files or directories
+# Example:
+# rm -rf folder/
+
+# 7. mkdir - Create directory
+# Example:
+# mkdir new_folder
+
+# 8. rmdir - Remove empty directory
+# Example:
+# rmdir folder
+
+# 9. touch - Create empty file
+# Example:
+# touch file.txt
+
+# 10. find - Search files
+# Example:
+# find / -name file.txt
+
+# 11. locate - Quick file search
+# Example:
+# locate file.txt
+
+# 12. stat - Show file details
+# Example:
+# stat file.txt
+
+# 13. ln - Create link
+# Example:
+# ln -s file link
+
+##############################
+# USER & GROUP MANAGEMENT
+##############################
+
+# 14. useradd - Create new user
+# sudo useradd username
+
+# 15. userdel - Delete user
+# sudo userdel username
+
+# 16. usermod - Modify user
+# sudo usermod -aG group username
+
+# 17. groupadd - Create group
+# sudo groupadd developers
+
+# 18. groupdel - Delete group
+# sudo groupdel developers
+
+# 19. passwd - Change password
+# passwd username
+
+# 20. su - Switch user
+# su -
+
+# 21. sudo - Execute as root
+# sudo command
+
+# 22. chage - Password aging
+# chage -l username
+
+# 23. id - User identity info
+# id username
+
+# 24. users - Logged in users
+# users
+
+# 25. whoami - Current user
+# whoami
+
+##############################
+# PERMISSIONS
+##############################
+
+# 26. chmod - Change permissions
+# chmod 755 script.sh
+
+# 27. chown - Change ownership
+# chown user:group file.txt
+
+# 28. chgrp - Change group
+# chgrp developers file.txt
+
+##############################
+# PROCESS MANAGEMENT
+##############################
+
+# 29. ps - List processes
+# ps aux
+
+# 30. top - Real-time processes
+# top
+
+# 31. kill - Kill process by PID
+# kill PID
+
+# 32. pkill - Kill by name
+# pkill process_name
+
+# 33. bg - Resume background job
+# bg %1
+
+# 34. fg - Bring to foreground
+# fg %1
+
+# 35. nice - Set priority
+# nice -n 10 command
+
+# 36. nohup - Run immune to hangup
+# nohup command &
+
+# 37. uptime - System uptime
+# uptime
+
+# 38. w - Logged users activity
+# w
+
+##############################
+# SYSTEM MONITORING
+##############################
+
+# 39. free - Memory usage
+# free -h
+
+# 40. df - Disk usage
+# df -h
+
+# 41. du - Directory usage
+# du -sh *
+
+# 42. uname - System info
+# uname -a
+
+# 43. hostname - Show hostname
+# hostname
+
+# 44. hostnamectl - Manage hostname
+# hostnamectl
+
+# 45. arch - System architecture
+# arch
+
+# 46. dmesg - Kernel logs
+# dmesg | tail
+
+# 47. iostat - IO statistics
+# iostat
+
+##############################
+# NETWORKING
+##############################
+
+# 48. ping - Test connectivity
+# ping google.com
+
+# 49. ssh - Remote login
+# ssh user@server
+
+# 50. scp - Secure copy
+# scp file user@server:/path
+
+# 51. rsync - Sync files
+# rsync -avz src/ dest/
+
+# 52. ip - Network config
+# ip a
+
+# 53. ifconfig - Network info
+# ifconfig
+
+# 54. netstat - Network stats
+# netstat -tulnp
+
+# 55. traceroute - Trace route
+# traceroute google.com
+
+# 56. curl - Transfer data
+# curl https://example.com
+
+# 57. wget - Download files
+# wget https://example.com/file
+
+# 58. dig - DNS lookup
+# dig google.com
+
+# 59. nslookup - DNS query
+# nslookup google.com
+
+# 60. tcpdump - Capture traffic
+# tcpdump -i eth0
+
+# 61. telnet - Remote connection
+# telnet host
+
+##############################
+# DISK & LVM
+##############################
+
+# 62. fdisk - Disk partitions
+# fdisk -l
+
+# 63. mount - Mount filesystem
+# mount /dev/sdb1 /mnt
+
+# 64. umount - Unmount filesystem
+# umount /mnt
+
+# 65. fsck - Check filesystem
+# fsck /dev/sdb1
+
+# 66. mkfs.xfs - Create XFS
+# mkfs.xfs /dev/sdb1
+
+# 67. mkswap - Create swap
+# mkswap /dev/sdb2
+
+# 68. swapon - Enable swap
+# swapon /dev/sdb2
+
+# 69. swapoff - Disable swap
+# swapoff /dev/sdb2
+
+# 70. pvcreate - Create physical volume
+# pvcreate /dev/sdb
+
+# 71. vgcreate - Create volume group
+# vgcreate vg_data /dev/sdb
+
+# 72. lvcreate - Create logical volume
+# lvcreate -L 1G -n lv_data vg_data
+
+# 73. xfs_growfs - Grow XFS
+# xfs_growfs /mountpoint
+
+# 74. xfs_repair - Repair XFS
+# xfs_repair /dev/sdb1
+
+##############################
+# PACKAGE MANAGEMENT
+##############################
+
+# 75. yum - Install packages
+# yum install package
+
+# 76. rpm - RPM management
+# rpm -qa
+
+# 77. createrepo - Create repo
+# createrepo /repo
+
+##############################
+# TEXT PROCESSING
+##############################
+
+# 78. cat
+# cat file.txt
+
+# 79. less
+# less file.txt
+
+# 80. more
+# more file.txt
+
+# 81. head
+# head file.txt
+
+# 82. tail
+# tail -f file.txt
+
+# 83. grep
+# grep "error" file.txt
+
+# 84. awk
+# awk '{print $1}' file.txt
+
+# 85. sed
+# sed 's/old/new/g' file.txt
+
+# 86. cut
+# cut -d: -f1 /etc/passwd
+
+# 87. sort
+# sort file.txt
+
+# 88. uniq
+# uniq file.txt
+
+# 89. wc
+# wc -l file.txt
+
+##############################
+# ARCHIVE & COMPRESSION
+##############################
+
+# 90. tar
+# tar -cvf archive.tar folder/
+
+# 91. gzip
+# gzip file.txt
+
+# 92. gunzip
+# gunzip file.txt.gz
+
+# 93. split
+# split -l 100 file.txt
+
+##############################
+# SERVICES & BOOT
+##############################
+
+# 94. systemctl
+# systemctl status sshd
+
+# 95. service
+# service sshd restart
+
+# 96. reboot
+# reboot
+
+# 97. shutdown
+# shutdown -h now
+
+# 98. halt
+# halt
+
+# 99. init
+# init 3
+
+##############################
+# SHELL & ENVIRONMENT
+##############################
+
+# 100. bash
+# bash script.sh
+
+# 101. sh
+# sh script.sh
+
+# 102. export
+# export PATH=$PATH:/newpath
+
+# 103. alias
+# alias ll='ls -la'
+
+# 104. history
+# history
+
+# 105. exit
+# exit
+
+##############################
+# HARDWARE & DIAGNOSTICS
+##############################
+
+# 106. dmidecode
+# dmidecode -t memory
+
+# 107. sosreport
+# sosreport
+
+##############################
+# SCHEDULING & MISC
+##############################
+
+# 108. at
+# at 10:00
+
+# 109. crontab
+# crontab -e
+
+# 110. whatis
+# whatis ls
+
+# 111. which
+# which python
+
+# 112. write
+# write username
+
+# 113. wall
+# wall "System maintenance"
+
+# 114. script
+# script session.log
+
+############################################################
+# Remaining Core Utilities
+############################################################
+
+# 115. arch
+# 116. bc
+# 117. cal
+# 118. clear
+# 119. cmp
+# 120. date
+# 121. dd
+# 122. diff
+# 123. free
+# 124. last
+# 125. man
+# 126. mount
+# 127. passwd
+# 128. ps
+# 129. read
+# 130. reboot
+# 131. sleep
+# 132. time
+# 133. top
+# 134. trap
+# 135. who
+# 136. xargs
+# 137. yes
+# 138. watch
+# 139. env
+# 140. printenv
+# 141. printf
+# 142. select
+# 143. source
+# 144. typeset
+# 145. ulimit
+# 146. unset
+# 147. wait
+# 148. exec
+# 149. jobs
+# 150. logout
+# 151. groups
+# 152. login
+# 153. reset
+
+############################################################
+echo "Linux Commands Handbook Loaded Successfully"
+############################################################
